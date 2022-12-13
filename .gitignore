@@ -1,0 +1,6 @@
+.projectile
+__pycache__/
+env/
+venv/
+docs/
+
