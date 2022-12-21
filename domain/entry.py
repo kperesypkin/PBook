@@ -4,7 +4,7 @@ from domain.person import Person
 
 class PhoneBookEntry:
 
-    def __init__(self, person: Person, number: int):
+    def __init__(self, person: Person, number: str):
         self._person = person
         self._number = number
 
@@ -17,5 +17,5 @@ class PhoneBookEntry:
         return self._number
 
     @number.setter
-    def number(self, number: int):
+    def number(self, number: str):
         self._number = number
