@@ -23,4 +23,3 @@ class PhoneBookEntry:
     @number.setter
     def number(self, number: int):
         self._number = number
-        
