@@ -12,10 +12,6 @@ class PhoneBookEntry:
     def person(self):
         return self._person
 
-    @person.setter
-    def person(self):
-        pass
-
     @property
     def number(self):
         return self._number

@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 class Person:
-    def __init__(self, first_name: str, second_name: str, patronymic: str = ""):
+
+    def __init__(self, first_name: str, second_name: str,
+                 patronymic: str = ""):
         self._first_name = first_name
         self._second_name = second_name
         self._patronymic = patronymic
