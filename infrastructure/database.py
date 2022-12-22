@@ -1,9 +1,11 @@
 import sqlite3
 
-from domain.person import Person
 from domain.entry import PBookEntry
+from domain.person import Person
 
-from infrastructure.config import queries, add_person, add_entry
+from infrastructure.config import add_entry
+from infrastructure.config import add_person
+from infrastructure.config import queries
 
 
 class PBookDB:
