@@ -2,6 +2,7 @@ import sqlite3
 
 from domain.entry import PBookEntry
 from domain.person import Person
+
 from infrastructure.database import PBookDB
 
 
@@ -23,7 +24,7 @@ class Phonebook:
         pass
 
     def find_by_number(self, number):
-        pass
+        self.db.find_by_number(number)
 
 
 
