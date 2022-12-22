@@ -24,7 +24,8 @@ class Phonebook:
         pass
 
     def find_by_number(self, number):
-        self.db.find_by_number(number)
+        result = self.db.find_by_number(number)
+        return result
 
-
-
+    def find_all(self):
+        self.db.find_all()
