@@ -1,8 +1,4 @@
-import sqlite3
-
 from domain.entry import PBookEntry
-from domain.person import Person
-
 from infrastructure.database import PBookDB
 
 
