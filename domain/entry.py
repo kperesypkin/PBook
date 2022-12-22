@@ -2,7 +2,7 @@
 from domain.person import Person
 
 
-class PhoneBookEntry:
+class PBookEntry:
 
     def __init__(self, person: Person, number: str):
         self._person = person

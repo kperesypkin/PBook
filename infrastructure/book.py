@@ -1,25 +1,22 @@
 import sqlite3
 
-from entry import Entry
-from database import Database
+from domain.entry import PBookEntry
+from domain.person import Person
+from infrastructure.database import PBookDB
 
 
 class Phonebook:
     """Phonebook class"""
     def __init__(self):
-        pass
-    
-    @classmethod
-    def create_database(cls):
-        pass
-    
-    def add_entry(self, name, number):
-        pass 
+        self.db = PBookDB()
 
-    def change_entry(self, entry):
+    def add_entry(self, entry: PBookEntry):
+        self.db.add_entry(entry)
+
+    def change_entry(self, entry: PBookEntry):
         pass
 
-    def del_entry(self):
+    def del_entry(self, entry: PBookEntry):
         pass
 
     def find_by_name(self, name):
@@ -28,4 +25,5 @@ class Phonebook:
     def find_by_number(self, number):
         pass
 
-book = Phonebook()
+
+
