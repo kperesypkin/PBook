@@ -6,6 +6,7 @@ from domain.person import Person
 from infrastructure.config import ADD_ENTRY
 from infrastructure.config import ADD_PERSON
 from infrastructure.config import ENTRIES_TBL
+from infrastructure.config import FIND_ALL
 from infrastructure.config import FIND_BY_NUMBER
 from infrastructure.config import PERSONS_TBL
 
@@ -40,7 +41,7 @@ class PBookDB:
         pass
 
     def find_all(self):
-        query = "select * from persons"
+        query = FIND_ALL
         rows = self._run_query(query).fetchall()
         return rows
 
@@ -54,4 +55,5 @@ class PBookDB:
         with sqlite3.connect(self.db_name) as conn:
             cursor = conn.cursor()
             result = cursor.execute(query, parameters)
+            conn.commit()
             return result

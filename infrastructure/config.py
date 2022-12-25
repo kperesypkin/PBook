@@ -38,6 +38,14 @@ ADD_ENTRY = """
           WHERE first_name = ? AND second_name = ? AND patronymic = ?
 """
 
+FIND_ALL = """
+          SELECT p.second_name, p.first_name, p.patronymic, e.phone_number
+          FROM persons p
+          LEFT JOIN entries e
+          ON p.id = e.person_id
+          ORDER BY p.second_name DESC
+"""
+
 FIND_BY_NUMBER = """
           SELECT p.second_name, p.first_name, p.patronymic, e.phone_number
           FROM persons p
