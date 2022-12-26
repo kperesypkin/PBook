@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-from domain.person import Person
+from domain.employee import Employee
 
 
 class PBookEntry:
 
-    def __init__(self, person: Person, number: str):
-        self._person = person
+    def __init__(self, employee: Employee, number: str):
+        self._employee = employee
         self._number = number
 
     @property
-    def person(self):
-        return self._person
+    def employee(self):
+        return self._employee
 
     @property
     def number(self):

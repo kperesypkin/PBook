@@ -1,7 +1,7 @@
 import sqlite3
 
 from domain.entry import PBookEntry
-from domain.person import Person
+from domain.employee import Employee
 
 from infrastructure.config import ADD_ENTRY
 from infrastructure.config import ADD_PERSON
@@ -26,9 +26,9 @@ class PBookDB:
     def add_entry(self, entry: PBookEntry):
         """Add an entry to database."""
         query = ADD_ENTRY
-        parameters = (entry.number, entry.person.first_name,
-                      entry.person.second_name, entry.person.patronymic)
-        self._add_person(entry.person)
+        parameters = (entry.number, entry.employee.first_name,
+                      entry.employee.second_name, entry.employee.patronymic)
+        self._add_employee(entry.employee)
         self._run_query(query, parameters)
 
     def find_by_number(self, number):
@@ -45,10 +45,10 @@ class PBookDB:
         rows = self._run_query(query).fetchall()
         return rows
 
-    def _add_person(self, person: Person):
+    def _add_employee(self, employee: Employee):
         query = ADD_PERSON
-        parameters = (person.first_name, person.second_name,
-                      person.patronymic)
+        parameters = (employee.first_name, employee.second_name,
+                      employee.patronymic)
         self._run_query(query, parameters)
 
     def _run_query(self, query, parameters=()):
