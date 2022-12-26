@@ -43,7 +43,7 @@ FIND_ALL = """
           FROM persons p
           LEFT JOIN entries e
           ON p.id = e.person_id
-          ORDER BY p.second_name DESC
+          ORDER BY p.second_name ASC
 """
 
 FIND_BY_NUMBER = """
@@ -52,5 +52,5 @@ FIND_BY_NUMBER = """
           LEFT JOIN entries e
           ON p.id = e.person_id
           WHERE e.phone_number = ?
-          ORDER BY p.second_name DESC
+          ORDER BY p.second_name ASC
 """

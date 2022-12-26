@@ -55,5 +55,4 @@ class PBookDB:
         with sqlite3.connect(self.db_name) as conn:
             cursor = conn.cursor()
             result = cursor.execute(query, parameters)
-            conn.commit()
             return result
