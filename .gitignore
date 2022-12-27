@@ -1,6 +1,6 @@
 pbook.db
 main.py
-quer.py
+queries.py
 .projectile
 __pycache__/
 env/

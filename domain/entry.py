@@ -1,21 +1,14 @@
 # -*- coding: utf-8 -*-
-from domain.employee import Employee
+from domain.entities import Contacts
+from domain.entities import Person
+from domain.entities import Position
 
 
 class PBookEntry:
 
-    def __init__(self, employee: Employee, number: str):
-        self._employee = employee
-        self._number = number
-
-    @property
-    def employee(self):
-        return self._employee
-
-    @property
-    def number(self):
-        return self._number
-
-    @number.setter
-    def number(self, number: str):
-        self._number = number
+    def __init__(self, person: Person, position: Position,
+                 contacts: Contacts, rank: str = None):
+        self.person = person
+        self.position = position
+        self.contacts = contacts
+        self.rank = rank
